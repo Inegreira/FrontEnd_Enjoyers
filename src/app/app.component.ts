@@ -7,7 +7,7 @@ import { Song } from './interfaces/song';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Music 4all';
+  title = 'Enjoyers';
 
   cancionSeleccionada?: Song;
 

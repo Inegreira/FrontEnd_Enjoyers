@@ -10,22 +10,6 @@ import { CancionComponent } from './components/cancion/cancion.component';
 import { ListadoCancionesComponent } from './components/listado-canciones/listado-canciones.component';
 import { ReproductorComponent } from './components/reproductor/reproductor.component';
 
-// Material
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatListModule} from '@angular/material/list';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatCardModule} from '@angular/material/card';
-import {MatInputModule} from '@angular/material/input';
-import {MatButtonModule} from '@angular/material/button';
-import {MatDividerModule} from '@angular/material/divider';
-
-//Firebase
-import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { AngularFireModule } from '@angular/fire';
-import { environment } from '../environments/environment';
-
-
 
 
 @NgModule({
@@ -34,24 +18,14 @@ import { environment } from '../environments/environment';
     CancionComponent,
     ListadoCancionesComponent,
     FiltroPipe,
-    ReproductorComponent,
-    
+    ReproductorComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    BrowserAnimationsModule,
-    MatListModule,
-    MatFormFieldModule,
-    MatCardModule,
-    MatInputModule,
-    MatButtonModule,
-    MatDividerModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAnalyticsModule,
-    AngularFirestoreModule
+    FormsModule
   ],
   providers: [AudioService, SongService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
